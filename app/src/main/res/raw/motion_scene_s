@@ -1,0 +1,388 @@
+{
+  ConstraintSets: {
+    start: {
+      leaf1: {
+        width: 130,
+        height: 130,
+        bottom: [
+          'parent',
+          'bottom',
+          0
+        ],
+        start: [
+          'parent',
+          'start',
+          0
+        ],
+        translationY: 48,
+        translationX: -48,
+//        translationZ: 28,
+        rotationZ: 70,
+      },
+      leaf2: {
+        width: 150,
+        height: 150,
+        end: [
+          'parent',
+          'end'
+        ],
+        top: [
+          'parent',
+          'top'
+        ],
+        bottom: [
+          'parent',
+          'bottom'
+        ],
+        translationX: 430
+      },
+      robot: {
+        width: 300,
+        height: 300,
+        start: [
+          'parent',
+          'start',
+          16
+        ],
+        end: [
+          'parent',
+          'end',
+          16
+        ],
+        bottom: [
+          'parent',
+          'bottom',
+          150
+        ],
+      },
+      cloud: {
+        width: 180,
+        height: 180,
+        top: [
+          'parent',
+          'top',
+          60
+        ],
+        end: [
+          'parent',
+          'end',
+          30
+        ],
+        transitionEasing: "linear"
+      },
+      leaf4: {
+        width: 130,
+        height: 130,
+        bottom: [
+          'parent',
+          'bottom',
+          60
+        ],
+        top: [
+          'parent',
+          'top'
+        ],
+        start: [
+          'parent',
+          'start'
+        ],
+        layout_editor_absoluteX: 311,
+        rotation: -80,
+        translationY: 20,
+        translationX: -400
+      },
+      leaf5: {
+        width: 130,
+        height: 130,
+        bottom: [
+          'parent',
+          'bottom',10
+        ],
+        end: [
+          'parent',
+          'end'
+        ],
+
+        translationY: 80,
+        translationX: 60,
+        rotationZ: -70
+      },
+      card: {
+        width: 350,
+        height: 537,
+        start: [
+          'parent',
+          'start'
+        ],
+        top: [
+          'robot',
+          'bottom'
+        ],
+        end: [
+          'parent',
+          'end'
+        ],
+      },
+      welcome: {
+        width: "wrap",
+        height: "wrap",
+        start: [
+          'parent',
+          'start'
+        ],
+        top: [
+          'parent',
+          'top'
+        ],
+        end: [
+          'parent',
+          'end'
+        ],
+        bottom: [
+          'parent',
+          'bottom'
+        ],
+      }
+    },
+
+
+    end: {
+      leaf1: {
+        width: 130,
+        height: 130,
+        top: [
+          'cloud',
+          'bottom',
+        ],
+        start: [
+          'parent',
+          'start',
+          0
+        ],
+        bottom: [
+          'leaf5',
+          'top',
+          140
+        ],
+        translationX: -28,
+      },
+      leaf2: {
+        width: 160,
+        height: 160,
+        end: [
+          'parent',
+          'end'
+        ],
+        top: [
+          'parent',
+          'top'
+        ],
+        bottom: [
+          'parent',
+          'bottom',300
+        ],
+        translationX: 130
+      },
+      robot: {
+        width: 100,
+        height: 100,
+        layout_editor_absoluteX: 56,
+
+        end: [
+          'parent',
+          'end',
+          20
+        ],
+        top: [
+          'parent',
+          'top'
+        ],
+      },
+      cloud: {
+        width: 80,
+        height: 80,
+        top: [
+          'parent',
+          'top',
+          0
+        ],
+        start: [
+          'parent',
+          'start',
+          20
+        ],
+      },
+      leaf4: {
+        width: 130,
+        height: 130,
+        bottom: [
+          'parent',
+          'bottom'
+        ],
+        top: [
+          'parent',
+          'top',300
+        ],
+        start: [
+          'parent',
+          'start'
+        ],
+        layout_editor_absoluteX: 311,
+        rotation: -80,
+        translationY: 20,
+        translationX: -50
+      },
+      leaf5: {
+        width: 130,
+        height: 130,
+        bottom: [
+          'parent',
+          'bottom',70
+        ],
+        end: [
+          'parent',
+          'end'
+        ],
+
+        translationY: 80,
+        translationX: 60,
+        rotationZ: 10
+      },
+      card: {
+        width: 350,
+        height: 537,
+        start: [
+          'parent',
+          'start'
+        ],
+        top: [
+          'robot',
+          'bottom',
+          8
+        ],
+        end: [
+          'parent',
+          'end'
+        ],
+      },
+      welcome: {
+        width: "wrap",
+        height: "wrap",
+        start: [
+          'parent',
+          'start'
+        ],
+        top: [
+          'parent',
+          'top'
+        ],
+        end: [
+          'parent',
+          'end'
+        ],
+        bottom: [
+          'parent',
+          'bottom'
+        ],
+      }
+    },
+  },
+  Transitions: {
+    default: {
+      from: 'start',
+      to: 'end',
+      onSwipe: {
+        anchor: 'card',
+        direction: 'up',
+        side: 'top',
+      },
+      KeyFrames: {
+        KeyAttributes: [
+          {
+            target: [
+              'robot'
+            ],
+            frames: [
+              25,
+              50,
+              75
+            ],
+            rotationZ: [
+              15,
+              -15,
+              15
+            ],
+          }
+        ],
+        KeyPositions: [
+          {
+            target: [
+              'cloud'
+            ],
+            frames: [
+              25,
+              50,
+              75
+            ],
+            percentX: [
+              0.4,
+              0.8,
+              0.1
+            ],
+          },
+          {
+            target: [
+              'leaf4'
+            ],
+            frames: [
+              50
+            ],
+            keyPositionType: [
+              'parentRelative'
+            ],
+            percentY: [
+              0.75
+            ],
+            percentX: [
+              0.75
+            ],
+          },
+          {
+            target: [
+              'leaf5'
+            ],
+            frames: [
+              50
+            ],
+            keyPositionType: [
+              'parentRelative'
+            ],
+            percentY: [
+              0.75
+            ],
+            percentX: [
+              0.75
+            ],
+          },
+          {
+            target: [
+              'leaf1'
+            ],
+            frames: [
+              50
+            ],
+            keyPositionType: [
+              'parentRelative'
+            ],
+            percentY: [
+              0.10
+            ],
+            percentX: [
+              0.10
+            ],
+          }
+        ]
+      },
+    }
+  }
+}
